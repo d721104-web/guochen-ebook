@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2026 品牌護城河】企業商標佈局與危機解密 | 國宸國際商標事務所</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',  // 極淺灰藍
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',  // 沉穩藍灰
+                            800: '#1e293b',  // 主標題深色
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            light: '#fcd34d',
+                            DEFAULT: '#d97706', // 香檳金/琥珀色
+                            dark: '#b45309',
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 30px -10px rgba(15, 23, 42, 0.08)',
+                        'premium-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #f8fafc; color: #334155; }
+        /* 隱藏滾動條但保持滾動功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* 選單啟動狀態樣式 */
+        .nav-active {
+            color: #d97706 !important;
+            font-weight: 700 !important;
+            border-left-color: #d97706 !important;
+            background-color: #f1f5f9;
+        }
+
+        /* 時間軸樣式進階版 */
+        .timeline-container { position: relative; }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 24px; /* 對齊圖示中心 */
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+        .timeline-item { position: relative; z-index: 1; }
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border: 2px solid #d97706;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #d97706;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 引言區塊視覺強化 */
+        .quote-block {
+            position: relative;
+            background: linear-gradient(to right, #ffffff, #f8fafc);
+        }
+        .quote-block::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 6rem;
+            color: #f1f5f9;
+            font-family: serif;
+            line-height: 1;
+            z-index: 0;
+        }
+        .quote-content { position: relative; z-index: 1; }
+        
+        /* 漸層文字 */
+        .text-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased flex flex-col md:flex-row min-h-screen selection:bg-accent selection:text-white">
+
+    <!-- 左側導覽列 (側邊欄) -->
+    <aside class="w-full md:w-72 lg:w-80 bg-white border-r border-brand-200 md:fixed md:h-screen overflow-y-auto no-scrollbar py-8 flex-shrink-0 z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+        <div class="px-8 mb-12">
+            <h2 class="font-serif text-2xl font-black tracking-widest text-brand-900 mb-1">國宸國際商標</h2>
+            <div class="h-0.5 w-12 bg-accent mb-2"></div>
+            <p class="text-[10px] text-brand-400 uppercase tracking-[0.2em] font-medium">Guochen Trademark</p>
+        </div>
+        <nav class="flex flex-col">
+            <a href="#cover" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">封面 / 導言</a>
+            <a href="#preface" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">作者序：寫在佈局之前</a>
+            <a href="#chapter-1" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">第一章：啟航 - 最划算的投資</a>
+            <a href="#chapter-2" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">第二章：暗礁 - 收到核駁通知</a>
+            <a href="#chapter-3" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">第三章：交鋒 - 電商侵權防禦</a>
+            <a href="#chapter-4" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">第四章：出海 - 跨國佈局策略</a>
+            <a href="#chapter-5" class="nav-link py-3 px-8 text-sm font-medium text-brand-500 border-l-4 border-transparent hover:bg-brand-50 hover:text-brand-800 transition-all duration-200">第五章：永續 - 品牌資產管理</a>
+            
+            <div class="mt-8 px-8">
+                <a href="https://line.me/ti/p/umTOEprRU2" target="_blank" class="block w-full py-3 px-4 bg-brand-900 text-white text-center text-sm font-bold rounded hover:bg-accent transition-colors duration-300 shadow-md">
+                    免費商標初檢諮詢
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- 右側主要內容區 -->
+    <main class="flex-1 md:ml-72 lg:ml-80 relative">
+        <!-- 背景裝飾 -->
+        <div class="absolute top-0 left-0 w-full h-[60vh] bg-gradient-to-b from-white to-transparent -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 py-12 md:py-24 lg:px-16">
+
+            <!-- 封面 -->
+            <section id="cover" class="min-h-[85vh] flex flex-col justify-center mb-16 relative">
+                <div class="absolute top-1/4 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10"></div>
+                
+                <div class="border-l-4 border-accent pl-6 md:pl-10">
+                    <div class="inline-block bg-white border border-brand-200 px-3 py-1 rounded-full text-xs font-bold text-accent tracking-widest mb-6 shadow-sm">
+                        2026 電子書 / 實戰指南
+                    </div>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-[4rem] font-black leading-tight text-brand-900 mb-6 text-gradient">
+                        品牌護城河：<br>
+                        <span class="text-3xl md:text-4xl lg:text-5xl text-brand-600 font-bold mt-3 block">企業商標佈局與危機解密</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-500 leading-relaxed mb-12 max-w-2xl font-light">
+                        從本土紮根到全球出海，為您將生硬的法規轉化為商業語言，建構堅不可摧的品牌資產。
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-brand-400 font-medium bg-white inline-flex px-6 py-3 rounded-lg shadow-sm border border-brand-100">
+                        <span class="text-brand-800">作者｜國宸國際商標事務所</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-300"></span>
+                        <span>版本｜2026 權威初版</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 作者序 -->
+            <section id="preface" class="mb-32 pt-16 border-t border-brand-200">
+                <h2 class="font-serif text-3xl font-bold mb-8 text-brand-900 flex items-center">
+                    <span class="w-8 h-1 bg-accent mr-4"></span>
+                    作者序：寫在佈局之前
+                </h2>
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>在商業競爭極速變化的今天，品牌名稱早已不是一個單純的代號，而是企業最具價值的無形資產。</p>
+                    <p>我們在實務中看過太多令人惋惜的案例：用心經營多年的品牌，因為忽視了商標註冊，最終收到一紙存證信函，被迫改名、下架商品，甚至面臨高額求償；也有滿懷抱負的企業準備進軍國際，卻發現品牌早已被海外的「商標蟑螂」搶註，出海之路被迫停滯。</p>
+                    
+                    <div class="quote-block p-8 my-10 rounded-xl shadow-premium border border-brand-100">
+                        <p class="quote-content text-2xl font-serif font-bold text-brand-800 leading-relaxed m-0 text-center">
+                            「商標，是法律賦予企業的<span class="text-accent">盾牌</span>，<br>也是您在市場攻防中的<span class="text-accent">利劍</span>。」
+                        </p>
+                    </div>
+
+                    <p>這本電子書匯集了國宸國際商標事務所的實戰精華。我們將生硬的法規轉化為商業語言，從基礎申請、駁回危機處理、電商侵權防禦，一路談到跨國佈局與品牌資產管理。無論您是剛起步的創業家，還是準備拓展海外版圖的企業決策者，這本書都將幫助您建構堅不可摧的品牌護城河。</p>
+                </div>
+            </section>
+
+            <!-- 第一章 -->
+            <section id="chapter-1" class="mb-32 pt-16 border-t border-brand-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-accent font-black tracking-widest text-sm bg-accent/10 px-3 py-1 rounded">CHAPTER 01</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-brand-900">啟航 — 為什麼商標是最划算的投資？</h2>
+                
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>許多創業者經常混淆「公司登記」與「商標註冊」。您可能擁有合法的公司營業執照，但這並不代表您擁有該名稱的「品牌專用權」。</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 my-10">
+                        <div class="bg-white p-6 rounded-xl shadow-premium border border-brand-100">
+                            <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4 text-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-900">保護範圍差異</h4>
+                            <p class="text-sm text-brand-500">公司登記僅限於「特定縣市」；商標權則是跨越縣市的「全國性」保護，直接保護您的 Logo 與文字。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-premium border border-brand-100">
+                            <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4 text-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-900">排他威嚇力</h4>
+                            <p class="text-sm text-brand-500">擁有商標，您才能在電商平台（如蝦皮、亞馬遜）進行品牌備案，並有權要求平台下架仿冒品。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-premium border border-brand-100">
+                            <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center mb-4 text-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2 text-brand-900">核心資產價值</h4>
+                            <p class="text-sm text-brand-500">公司名稱難以單獨變現，但商標可以授權、加盟、轉讓，是企業估值與併購的重要指標。</p>
+                        </div>
+                    </div>
+
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-16 mb-8 border-b-2 border-brand-100 pb-4">台灣商標申請 5 大標準流程 (專業解析)</h3>
+                    
+                    <!-- 流程視覺化 -->
+                    <div class="space-y-4 mb-12">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-200 flex flex-col md:flex-row gap-6 items-start hover:shadow-premium transition-shadow duration-300">
+                            <div class="bg-brand-900 text-white font-bold py-2 px-4 rounded md:w-32 text-center shrink-0">Step 1</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900">商標檢索與策略擬定 <span class="text-accent text-sm ml-2">★ 送件前最關鍵</span></h4>
+                                <p class="text-brand-600 m-0">全面比對智慧財產局資料庫，排除文字、圖形與讀音的近似風險，並依據商業模式精準選擇適合的類別。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-200 flex flex-col md:flex-row gap-6 items-start hover:shadow-premium transition-shadow duration-300">
+                            <div class="bg-brand-200 text-brand-700 font-bold py-2 px-4 rounded md:w-32 text-center shrink-0">Step 2</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900">正式送件申請</h4>
+                                <p class="text-brand-600 m-0">提交完整申請書與政府規費。台灣採「先申請原則」，越早送件越能卡位防搶註。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-200 flex flex-col md:flex-row gap-6 items-start hover:shadow-premium transition-shadow duration-300">
+                            <div class="bg-brand-200 text-brand-700 font-bold py-2 px-4 rounded md:w-32 text-center shrink-0">Step 3</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900">程序審查與實體審查 <span class="text-brand-400 text-sm font-normal ml-2">耗時約 6-8 個月</span></h4>
+                                <p class="text-brand-600 m-0">官方審查員將檢視商標是否具備「識別性」，以及是否與他人已註冊或申請在先的商標「構成近似」。</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-50 p-6 rounded-xl shadow-sm border border-accent/30 flex flex-col md:flex-row gap-6 items-start relative overflow-hidden">
+                            <div class="absolute right-0 top-0 w-16 h-16 bg-accent/10 rounded-bl-full"></div>
+                            <div class="bg-accent text-white font-bold py-2 px-4 rounded md:w-32 text-center shrink-0">Step 4</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900">核准審定與繳納註冊費</h4>
+                                <p class="text-brand-700 m-0 font-medium">收到核准審定書後，需於 <strong class="text-accent">2 個月內</strong> 繳納註冊費。繳費後，智財局即辦理「註冊公告」並發放證書，您 <strong class="text-accent border-b border-accent">自公告當日起即正式取得商標權</strong>。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-200 flex flex-col md:flex-row gap-6 items-start hover:shadow-premium transition-shadow duration-300">
+                            <div class="bg-brand-900 text-white font-bold py-2 px-4 rounded md:w-32 text-center shrink-0">Step 5</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900">3 個月註冊公告異議期 <span class="text-accent text-sm ml-2">★ 台灣特有制度</span></h4>
+                                <p class="text-brand-600 m-0">不同於部分國家的「註冊前異議」，台灣採「註冊後異議」制。商標公告後 <strong class="text-brand-800">3 個月內</strong> 開放公眾審查，若無人提出異議或異議不成立，您的商標權即穩固確立。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-16 mb-6">自己申請 vs. 專業代辦的隱藏成本</h3>
+                    <div class="overflow-x-auto rounded-xl shadow-sm border border-brand-200 mb-8">
+                        <table class="min-w-full bg-white text-base">
+                            <thead class="bg-brand-50 border-b border-brand-200">
+                                <tr>
+                                    <th class="py-4 px-6 text-left font-bold text-brand-800 w-1/4">考量點</th>
+                                    <th class="py-4 px-6 text-left font-bold text-brand-500 w-1/3">自行申請 (DIY)</th>
+                                    <th class="py-4 px-6 text-left font-bold text-accent-dark w-5/12 bg-accent/5">國宸專業代辦</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-brand-100">
+                                <tr class="hover:bg-brand-50/50 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-brand-700">前期檢索</td>
+                                    <td class="py-4 px-6 text-brand-500">僅能做簡單字面比對，極易漏看圖形與讀音近似風險</td>
+                                    <td class="py-4 px-6 font-medium text-brand-900 bg-accent/5">AI 輔助與人工深度比對，全面覆蓋讀音、字義與圖形</td>
+                                </tr>
+                                <tr class="hover:bg-brand-50/50 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-brand-700">類別選擇</td>
+                                    <td class="py-4 px-6 text-brand-500">易選錯或漏選，導致日後保護出現致命漏洞</td>
+                                    <td class="py-4 px-6 font-medium text-brand-900 bg-accent/5">依據企業短中長期商業模式，精準佈局不花冤枉錢</td>
+                                </tr>
+                                <tr class="hover:bg-brand-50/50 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-brand-700">核駁風險</td>
+                                    <td class="py-4 px-6 text-brand-500">遇官方審查意見難以專業答辯，高機率被直接退件</td>
+                                    <td class="py-4 px-6 font-medium text-brand-900 bg-accent/5">專業顧問團隊撰寫法律意見書，大幅提升逆轉核准率</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="bg-brand-800 p-6 rounded-xl mt-8 text-white shadow-premium flex items-start gap-4">
+                        <svg class="w-8 h-8 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-accent-light">國宸觀點：隱藏的沉沒成本</h4>
+                            <p class="text-brand-100 text-sm m-0 leading-relaxed">
+                                申請商標的官方規費一旦繳納，若最終被駁回是<strong class="text-white">不會退還</strong>的。更嚴重的是，這意味著您可能需要重新命名、重印包裝，浪費了 8 個月的寶貴時間。「精準的送件前檢索」是我們為客戶省下時間與金錢的最強武器。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第二章 -->
+            <section id="chapter-2" class="mb-32 pt-16 border-t border-brand-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-accent font-black tracking-widest text-sm bg-accent/10 px-3 py-1 rounded">CHAPTER 02</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-brand-900">暗礁 — 收到「核駁通知書」的危機處理</h2>
+                
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>等待了半年，滿心期待卻收到智財局寄來的「核駁理由先行通知書」？先別慌張，這並不代表您的商標被判了死刑。它只是審查員給出的「暫時性負面看法」，您擁有 <strong class="text-accent border-b-2 border-accent/30 px-1">30 天</strong> 的法定期間可以提出正式的書面答辯（意見陳述書）。</p>
+                    
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-6">兩大常見駁回理由與逆轉之道</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-8">
+                        <div class="bg-white p-8 border border-brand-200 rounded-2xl shadow-sm hover:shadow-premium transition-shadow">
+                            <div class="inline-block bg-brand-100 text-brand-600 font-bold px-3 py-1 rounded text-sm mb-4">商標法 第 29 條</div>
+                            <h4 class="font-bold text-xl mb-3 text-brand-900">不具識別性</h4>
+                            <p class="text-base mb-6 text-brand-500">審查員認為您的品牌名稱太過通俗，或只是在描述產品本身。例如：賣牛肉麵的店名叫「好吃牛肉麵」，賣衣服的叫「極致純棉」。</p>
+                            <div class="bg-brand-50 p-5 rounded-xl border-l-4 border-accent">
+                                <span class="text-accent-dark font-bold text-base block mb-2 flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    逆轉策略：主張「後天識別性」
+                                </span>
+                                <p class="text-sm text-brand-600 m-0">在意見書中提出大量的廣告發票、媒體報導、KOL 推薦、銷售數據，證明這個名稱雖然通俗，但經過長期且大量的行銷，消費者一看到它就會聯想到您的企業，已具備區辨來源的能力。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 border border-brand-200 rounded-2xl shadow-sm hover:shadow-premium transition-shadow">
+                            <div class="inline-block bg-brand-100 text-brand-600 font-bold px-3 py-1 rounded text-sm mb-4">商標法 第 30 條</div>
+                            <h4 class="font-bold text-xl mb-3 text-brand-900">近似於他人商標</h4>
+                            <p class="text-base mb-6 text-brand-500">審查員認為您的商標與已註冊（或申請在先）的前案太過相像，可能導致消費者在購買時產生混淆誤認。</p>
+                            <div class="bg-brand-50 p-5 rounded-xl border-l-4 border-accent">
+                                <span class="text-accent-dark font-bold text-base block mb-2 flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    逆轉策略：切割市場區隔
+                                </span>
+                                <p class="text-sm text-brand-600 m-0">這極度仰賴論述功力。我們會在答辯書中詳細解構雙方在「字義、構圖、觀念」上的細微差異，並舉證雙方的「目標客群」、「銷售管道」完全不同，且單價差距甚大，消費者施以普通注意即可輕易分辨。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第三章 -->
+            <section id="chapter-3" class="mb-32 pt-16 border-t border-brand-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-accent font-black tracking-widest text-sm bg-accent/10 px-3 py-1 rounded">CHAPTER 03</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-brand-900">交鋒 — 電商時代的商標侵權防禦戰</h2>
+                
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>在網購發達的今天，許多網拍賣家、代購業者往往在不知不覺中踩到商標侵權的地雷，面臨動輒數十萬的求償金。</p>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-200 my-8">
+                        <h3 class="font-serif text-2xl font-bold text-brand-800 mt-0 mb-6">電商常見的兩大侵權陷阱</h3>
+                        <ul class="space-y-4 m-0 pl-0 list-none">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                <div>
+                                    <strong class="text-brand-900 block mb-1">濫用官方圖片與 Logo</strong>
+                                    <span class="text-brand-500 text-base">直接下載原廠官網的商品圖，或帶有 Logo 的照片作為自己蝦皮賣場的首圖。這可能同時面臨「著作權（圖片）」與「商標權（Logo）」的雙重侵權告訴。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 mt-6">
+                                <svg class="w-6 h-6 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                <div>
+                                    <strong class="text-brand-900 block mb-1">越界的平行輸入（水貨）</strong>
+                                    <span class="text-brand-500 text-base">台灣雖允許「真品平行輸入」，但前提是商品未經變更。若您自行分裝、竄改包裝，或在文案中過度強調對方商標，讓消費者誤以為您是「官方授權代理商」，法庭上依然會判定構成侵權。</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-10">收到保智大隊通知或存證信函怎麼辦？</h3>
+                    
+                    <!-- 進階版時間軸 -->
+                    <div class="timeline-container pl-2 mt-8 mb-12">
+                        <div class="timeline-item flex gap-6 mb-10">
+                            <div class="timeline-icon shrink-0 text-sm">01</div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-100 flex-1 hover:-translate-y-1 transition-transform duration-300">
+                                <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">收到當下</span>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900 m-0">冷靜停損</h4>
+                                <p class="text-brand-500 text-sm m-0">立即暫時下架有爭議的商品網頁。截圖並妥善保存雙方對話紀錄、進貨憑證（如淘寶訂單、國外發票）。<strong class="text-red-500">切勿在驚慌中立刻回覆對方承認錯誤</strong>，以免留下對後續談判極為不利的證據。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item flex gap-6 mb-10">
+                            <div class="timeline-icon shrink-0 text-sm">02</div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-100 flex-1 hover:-translate-y-1 transition-transform duration-300">
+                                <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">1 - 3 天內</span>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900 m-0">權利實質檢視</h4>
+                                <p class="text-brand-500 text-sm m-0">委託專業顧問查詢對方商標狀態。確認其商標是否在有效期限內？註冊的「商品類別」是否與您販售的商品真正相符？實務上常有對方跨類別虛張聲勢的情況。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item flex gap-6 mb-10">
+                            <div class="timeline-icon shrink-0 text-sm">03</div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-brand-100 flex-1 hover:-translate-y-1 transition-transform duration-300">
+                                <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">3 - 7 天內</span>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900 m-0">策略擬定與賠償估算</h4>
+                                <p class="text-brand-500 text-sm m-0">評估自身行為是否符合商標法第 36 條的「合理使用」。若確認構成侵權，由顧問依據法規協助估算合理的賠償範圍，確立談判底線，避免被權利人獅子大開口。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item flex gap-6">
+                            <div class="timeline-icon shrink-0 bg-brand-900 text-white border-brand-900 text-sm">04</div>
+                            <div class="bg-brand-50 p-6 rounded-xl shadow-sm border border-brand-200 flex-1 hover:-translate-y-1 transition-transform duration-300">
+                                <span class="text-xs font-bold text-brand-500 uppercase tracking-widest block mb-2">第 2 週起</span>
+                                <h4 class="font-bold text-xl mb-2 text-brand-900 m-0">專業出面談判</h4>
+                                <p class="text-brand-600 text-sm m-0">由國宸顧問或律師代表出面，與對方代理人進行和解談判，或擬定赴保智大隊做筆錄的應訴策略，以最小代價解決危機。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第四章 -->
+            <section id="chapter-4" class="mb-32 pt-16 border-t border-brand-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-accent font-black tracking-widest text-sm bg-accent/10 px-3 py-1 rounded">CHAPTER 04</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-brand-900">出海 — 跨國貿易的商標佈局策略</h2>
+                
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>商標權具有嚴格的「<strong class="text-brand-900">屬地主義</strong>」。在台灣取得註冊的商標，出了台灣海關就沒有任何保護效力。若您經營跨境電商（如 Amazon、Pinkoi）或外銷 B2B，國際商標佈局是您出海必須準備的第一張門票。</p>
+                    
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-6">兩大熱門跨境市場佈局重點</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-10">
+                        <div class="bg-brand-900 text-white p-8 rounded-2xl relative overflow-hidden">
+                            <div class="absolute -right-4 -bottom-4 text-[8rem] font-black text-white/5 leading-none">US</div>
+                            <h4 class="font-bold text-xl mb-3 text-accent-light">美國市場 (USA)</h4>
+                            <p class="text-brand-200 text-sm m-0">亞馬遜 (Amazon) 賣家的必爭之地。美國商標極度重視「使用證據 (Use in Commerce)」，申請時必須提供帶有商標的真實產品照片或銷售網頁。擁有美國商標 R 標，即可進行 Amazon Brand Registry，解鎖 A+ 頁面並防範惡意跟賣。</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-2xl border border-brand-200 relative overflow-hidden shadow-sm">
+                            <div class="absolute -right-4 -bottom-4 text-[8rem] font-black text-brand-900/5 leading-none">CN</div>
+                            <h4 class="font-bold text-xl mb-3 text-brand-900">中國市場 (China)</h4>
+                            <p class="text-brand-500 text-sm m-0">採極其嚴格的「先申請原則」。由於商標搶註風氣盛行，且中國審查速度極快，強烈建議在產品於網路上曝光或前往當地參展前，就必須優先完成中國商標的送件卡位。</p>
+                        </div>
+                    </div>
+
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-6">國際佈局途徑評估：單國直申 vs. 馬德里商標</h3>
+                    <div class="bg-white rounded-xl shadow-sm border border-brand-200 overflow-hidden">
+                        <table class="min-w-full text-base">
+                            <thead class="bg-brand-50 border-b border-brand-200">
+                                <tr>
+                                    <th class="py-4 px-6 text-left font-bold text-brand-800 w-1/4">比較項目</th>
+                                    <th class="py-4 px-6 text-left font-bold text-brand-600 w-3/8 border-r border-brand-100">單一國家直接申請</th>
+                                    <th class="py-4 px-6 text-left font-bold text-brand-900 w-3/8">馬德里商標 (Madrid System)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-brand-100">
+                                <tr>
+                                    <td class="py-4 px-6 font-bold text-brand-700 bg-brand-50/30">適用情境</td>
+                                    <td class="py-4 px-6 text-brand-600 border-r border-brand-100">僅鎖定 1-2 個特定重點國家市場</td>
+                                    <td class="py-4 px-6 text-brand-600">一次性佈局多國（如歐洲多國、日韓美）</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6 font-bold text-brand-700 bg-brand-50/30">申請手續</td>
+                                    <td class="py-4 px-6 text-brand-600 border-r border-brand-100">需委託各國當地代理人，語言/手續繁瑣</td>
+                                    <td class="py-4 px-6 text-brand-600">單一語言、單一申請程序，後續管理極方便</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6 font-bold text-brand-700 bg-brand-50/30">主要風險</td>
+                                    <td class="py-4 px-6 text-brand-600 border-r border-brand-100">各國獨立審查，風險分散，一國沒過不影響他國</td>
+                                    <td class="py-4 px-6 text-red-600 font-medium bg-red-50/30">「中心打擊」風險（5年內若原屬國母案被撤銷，所有國際案將連帶失效）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第五章 -->
+            <section id="chapter-5" class="mb-24 pt-16 border-t border-brand-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-accent font-black tracking-widest text-sm bg-accent/10 px-3 py-1 rounded">CHAPTER 05</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10 text-brand-900">永續 — 商標註冊後的品牌資產管理</h2>
+                
+                <div class="prose prose-lg prose-slate max-w-none text-brand-600 leading-loose">
+                    <p>順利取得商標註冊證書，絕對不是品牌保護的終點，而是防禦工程的起點。</p>
+                    
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-6">主動防禦：異議與評定制度</h3>
+                    <p>市場上隨時會有競爭對手試圖「致敬」您的品牌，蹭取您的商譽。</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 my-8">
+                        <div class="flex-1 bg-white p-6 border-t-4 border-accent shadow-sm rounded-b-xl">
+                            <h4 class="font-bold text-xl text-brand-900 mb-2">商標異議 (Opposition)</h4>
+                            <p class="text-sm text-brand-500 m-0 leading-relaxed">智財局每半個月會發布「商標註冊公報」。若您發現剛核准註冊公告的商標與您極為相似，您有 <strong class="text-accent">3 個月</strong> 的時間提出異議，將其撤銷。這是成本最低、效率最高的防禦手段。</p>
+                        </div>
+                        <div class="flex-1 bg-white p-6 border-t-4 border-brand-800 shadow-sm rounded-b-xl">
+                            <h4 class="font-bold text-xl text-brand-900 mb-2">商標評定 (Invalidation)</h4>
+                            <p class="text-sm text-brand-500 m-0 leading-relaxed">如果您錯過了 3 個月的異議期，對方的近似商標已經註冊確定，您仍可透過啟動「評定程序」，準備更充分的證據，要求智財局撤銷該違法註冊的商標。</p>
+                        </div>
+                    </div>
+
+                    <h3 class="font-serif text-2xl font-bold text-brand-800 mt-12 mb-6">完善護城河：不可忽視的「第 35 類」</h3>
+                    <p>在所有 45 個商標類別中，第 35 類（涵蓋：廣告、企業管理、線上購物零售批發服務）被稱為企業的「萬能防護網」。</p>
+                    <p>假設您是經營獨立服飾品牌的（第 25 類服飾），若您同時擁有官網進行線上販售，強烈建議您必須加註第 35 類。否則，別人雖然不能生產跟您同名的衣服，卻可以合法開一家跟您同名的「網路服飾店」賣別人的衣服，這將對您的品牌信譽造成巨大的混淆與打擊。</p>
+
+                    <div class="bg-brand-50 p-8 rounded-2xl mt-12 border border-brand-200 text-center">
+                        <svg class="w-10 h-10 text-brand-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <h4 class="font-bold text-xl text-brand-900 mb-2">國宸專屬年度品牌監控</h4>
+                        <p class="text-brand-600 text-sm max-w-xl mx-auto">我們建議企業應建立定期的「品牌健康檢查」機制。國宸提供專業的年度商標公報監控服務，替您掃描潛在的侵權申請，確保您的品牌護城河永遠堅不可摧。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 結語 CTA -->
+            <section id="conclusion" class="mt-32 pt-20 border-t border-brand-200 text-center relative">
+                <h2 class="font-serif text-3xl md:text-4xl font-black mb-6 text-brand-900 tracking-wide">讓國宸成為您的品牌專屬智庫</h2>
+                <p class="text-brand-500 mb-12 max-w-2xl mx-auto leading-relaxed text-lg">
+                    品牌價值的累積需要數年，但毀滅可能只需一次法律疏漏。<br>
+                    我們不只提供冰冷的代辦服務，更致力於為您守護每一寸商業領土。<br>
+                    您準備好建構專屬的品牌護城河了嗎？
+                </p>
+                
+                <div class="bg-gradient-to-br from-brand-900 to-brand-800 p-1 md:p-2 rounded-3xl shadow-premium-hover max-w-2xl mx-auto transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="bg-white rounded-[22px] p-8 md:p-12 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-accent"></div>
+                        <span class="inline-block bg-brand-50 text-brand-800 border border-brand-200 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">電子書讀者專屬行動方案</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-brand-900">免費品牌商標健康初檢</h3>
+                        <p class="text-base text-brand-500 mb-10 leading-relaxed">凡閱讀本指南的企業主，無論您是準備申請新商標，或是遇到了難解的侵權糾紛、核駁通知，國宸資深顧問都隨時準備好為您解答。</p>
+                        
+                        <a href="https://line.me/ti/p/umTOEprRU2" target="_blank" class="group relative inline-flex items-center justify-center w-full md:w-auto px-10 py-5 text-lg font-bold text-white transition-all duration-300 bg-brand-900 font-sans rounded-xl overflow-hidden hover:shadow-premium">
+                            <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out bg-accent group-hover:bg-accent-dark -translate-x-full group-hover:translate-x-0"></span>
+                            <span class="relative flex items-center gap-2">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.04.726-.035 1.026l-.234 1.157c-.062.29-.296 1.19 1.043.627 1.341-.563 7.234-4.264 9.624-7.487 1.637-2.189 2.509-4.814 2.509-5.523z"/></svg>
+                                立即加入 LINE 預約諮詢
+                            </span>
+                        </a>
+                        <p class="text-xs text-brand-400 mt-4">點擊連結加入國宸官方 LINE (@umTOEprRU2)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="mt-32 pb-12 text-center border-t border-brand-200 pt-8">
+                <h4 class="font-serif font-bold text-brand-800 mb-2 tracking-widest">國宸國際商標事務所</h4>
+                <p class="text-sm text-brand-400">Guochen International Trademark Office</p>
+                <p class="text-xs text-brand-300 mt-6">© 2026 All rights reserved. 本電子書內容受著作權法保護。</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- JavaScript: 處理側邊欄高亮 (ScrollSpy) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // 監聽滾動事件
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                // 找出當前在視窗內的區塊
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // 減去一個偏移量讓切換更順暢
+                    if (scrollY >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                // 更新選單樣式
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-active');
+                    if (link.getAttribute('href').includes(current) && current !== '') {
+                        link.classList.add('nav-active');
+                    }
+                });
+            });
+            
+            // 觸發一次 scroll 來初始化選單狀態
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
